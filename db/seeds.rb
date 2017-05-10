@@ -34,12 +34,19 @@ Brand.create([
   }
 ])
 
+def sneaker_price
+  rand(1435..8900)
+end
+
+Sneaker_sex = ["F", "M"]
+Sneaker_model = ["Huarache", "Gel", "Stars"]
+
 def create_sneaker
   Sneaker.create(
     brand_id: random_brand_id,
-    model: "Huarache",
-    sex: "F",
-    price: 5754
+    price: sneaker_price,
+    sex: Sneaker_sex.sample,
+    model: Sneaker_model.sample
   )
 end
 
